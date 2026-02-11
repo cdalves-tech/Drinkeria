@@ -1,0 +1,15 @@
+
+
+:root {
+  /* Cores extraídas do seu design da Drinkeria */
+  --cor-primaria-roxo: #681682;
+  --cor-primaria-roxo-vibrante: #6A1B9A;
+  --cor-secundaria-laranja: #FF8C00;
+  --cor-fundo-site: #F8F9FA;
+  --cor-texto-preto: #1A1A1A;
+  --cor-branco: #FFFFFF;
+  --dr-fundo-busca: #EBE4F2;
+  
+  /* Gradiente do Banner de Ofertas */
+  --gradiente-ofertas: linear-gradient(90deg, #6A1B9A 0%, #FF8C00 100%);
+}
