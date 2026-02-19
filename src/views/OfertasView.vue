@@ -3,3 +3,7 @@
         teste ofertas
     </div>
 </template>
+
+<script>
+
+</script>

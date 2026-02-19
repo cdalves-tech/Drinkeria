@@ -29,38 +29,41 @@
     <div class="container">
       <nav class="filtro">
         <ul id="ul-filtro">
-          <li>
+          <li :class="{ active: $route.path === '/todos' }">
             <router-link to="/todos" class="link">Todos</router-link>
           </li>
-          <li>
+          <li :class="{ active: $route.path === '/classicos' }">
             <router-link to="/classicos" class="link">Clássicos</router-link>
           </li>
-          <li>
+          <li :class="{ active: $route.path === '/tropicais' }">
             <router-link to="/tropicais" class="link">Tropicais</router-link>
           </li>
-          <li>
+          <li :class="{ active: $route.path === '/gin' }">
             <router-link to="/gin" class="link">Gin Tônicas</router-link>
           </li>
-          <li>
+          <li :class="{ active: $route.path === '/semalcool' }">
             <router-link to="/semalcool" class="link">Sem Álcool</router-link>
           </li>
         </ul>
       </nav>
     </div>
   </section>
+  
   <section name="produtos">
     <div class="container">
       <div class="cards">
-
       </div>
     </div>
   </section>
+  
   <DrinksView />
 </template>
 
-
 <script setup>
-import DrinksView from '@/views/DrinksView.vue';
+import { useRoute } from 'vue-router'
+import DrinksView from '@/views/DrinksView.vue'
+
+const route = useRoute()
 </script>
 
 <style scoped>
@@ -88,7 +91,6 @@ import DrinksView from '@/views/DrinksView.vue';
   padding: 15px 65px 15px 40px;
   border-radius: 17px;
   border: 1px solid #ddd;
-
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236A1B9A' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 15px center;
@@ -112,7 +114,6 @@ import DrinksView from '@/views/DrinksView.vue';
   opacity: 0.9;
 }
 
-
 #ul-filtro {
   display: flex;
   gap: 50px;
@@ -125,11 +126,18 @@ import DrinksView from '@/views/DrinksView.vue';
 #ul-filtro li {
   background-color: var(--dr-fundo-busca);
   border-radius: 15px;
-  min-width: 170px;      /* 👈 resolve o problema */
+  min-width: 170px;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
+#ul-filtro li.active {
+  background-color: var(--cor-primaria-roxo);
+}
 
+#ul-filtro li.active .link {
+  color: #fff;
+}
 
 .link {
   display: flex;
@@ -142,7 +150,6 @@ import DrinksView from '@/views/DrinksView.vue';
   font-weight: 580;
 }
 
-
 #ul-filtro li:hover {
   background-color: var(--cor-primaria-roxo);
 }
@@ -150,5 +157,4 @@ import DrinksView from '@/views/DrinksView.vue';
 #ul-filtro li:hover .link {
   color: #fff;
 }
-
 </style>
