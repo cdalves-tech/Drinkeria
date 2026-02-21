@@ -1,17 +1,11 @@
 <template>
-
   <TheNavbar />
-  <HomeView />
-
-  <div class="container">
-  </div>
+  <RouterView />
 </template>
 
 <script setup>
+import { RouterView } from 'vue-router'
 import TheNavbar from './components/layout/TheNavbar.vue';
-import HomeView from './components/layout/HomeView.vue';
-
-
 </script>
 
 <style>

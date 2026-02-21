@@ -1,15 +1,51 @@
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Cores extraídas do seu design da Drinkeria */
-  --cor-primaria-roxo: #681682;
-  --cor-primaria-roxo-vibrante: #6A1B9A;
-  --cor-secundaria-laranja: #FF8C00;
-  --cor-fundo-site: #F8F9FA;
-  --cor-texto-preto: #1A1A1A;
-  --cor-branco: #FFFFFF;
-  --dr-fundo-busca: #EBE4F2;
-  
-  /* Gradiente do Banner de Ofertas */
-  --gradiente-ofertas: linear-gradient(90deg, #6A1B9A 0%, #FF8C00 100%);
+  --cor-primaria-roxo: #2f6a3b;
+  --cor-primaria-roxo-vibrante: #1f4d2b;
+  --cor-secundaria-laranja: #d38a2a;
+  --cor-dourado: #f2d6a7;
+  --cor-fundo-site: #f7f4ec;
+  --cor-texto-preto: #1e2a1f;
+  --cor-branco: #ffffff;
+  --dr-fundo-busca: #efe7d7;
+  --gradiente-ofertas: linear-gradient(90deg, #2f6a3b 0%, #d38a2a 100%);
+  --color-surface: #fffdf8;
+  --color-surface-alt: #f3ecde;
+  --color-border: #dccfb8;
+  --color-muted: #6e7664;
+  --color-danger: #b2543c;
+  --color-chip: #e8dfcd;
+  --color-chip-active: #dce8c7;
+  --color-title: #1f2520;
+  --color-price: #9a4f2b;
+  --color-category: #5d4a2a;
+  --color-outline-accent: #8f6a34;
+  --font-body: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
+}
+
+body {
+  background: linear-gradient(180deg, #f7f4ec 0%, #f2edde 100%);
+  color: var(--cor-texto-preto);
+  font-family: var(--font-body);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }
